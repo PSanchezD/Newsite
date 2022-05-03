@@ -2,7 +2,7 @@ function Nav(){
     return(
         <>
             <div className="navbar">
-                <h1>NewsLite</h1>
+                <a href="#">NewsLite</a>
             </div>
         </>
     )

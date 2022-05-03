@@ -1,51 +1,106 @@
-
-
-
-
-body{
-    margin: 0px;
-    padding: 0px;
+body {
+  margin: 0px;
+  padding: 0px;
 }
 
 /*Navbar section----------*/
-.navbar{
-    background-color: black;
-    margin: 0px;
+.navbar {
+  background-color: black;
+  margin: 0px;
 }
-.navbar h1{
-    display: flex;
-    justify-content: center;
-    margin: 0px;
-    color: white;
+.navbar a {
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 30px;
+  margin: 0px;
+  padding: 10px;
+  color: white;
 }
-
 
 /* sidebar section -------------------*/
-.sidebar{
-    border: none;
-    background-color: rgb(35, 35, 35);
-    height: 1200px;
-    width: 300px;
-    color: bisque;
+.sidebar-c {
+  border: none;
+  background-color: rgb(35, 35, 35);
+  color: bisque;
+  width: 200px;
+  height: auto;
 }
-.sidebar h1{
-    margin: 0px;
+.sidebar-div{
+    display: flex;
+    flex-direction: column;
+    margin: 30px;
 }
+.sidebar-div a{
+    margin: 10px;
+    padding: 5px 0px 5px 0px;
+    font-size: 20px;    
+    text-transform: capitalize;
+    border-bottom: grey 1px solid;
+}
+
+
+
 
 /*content page ---------------------------*/
 
-.content{
+.content {
+  display: flex;
+  background-color: aliceblue;
+}
+
+
+/* card section-------------------- */
+.container{
     display: flex;
-    background-color: aliceblue;
+    flex-flow: wrap;
+    justify-content: center;
+    margin: 30px 100px 30px 100px;
+}
+.card-c{
+    margin: 20px;
+}
+.card-r{
+   margin: 20px;
+}
+.card{
+    border: black 3px solid;
+    width: 300px;
+    height: 300px;
 }
 
 /*Footer section -------------------------*/
-.footer{
-    margin: 0px;
-    background-color: black;
-}
-.footer h1 {
-    margin: 0px ;
-    color: aliceblue;
-}
 
+.footer-c {
+  margin: 0px;
+  padding: 30px 0px 30px 100px ;
+
+  background-color: black;
+}
+.footer-r {
+  display: flex;
+  color: white;
+}
+.footer-logo {
+  margin: 0px 100px 0px 0px;
+}
+.footer-logo p {
+  width: 200px;
+  height: 200px;
+  background-color: bisque;
+}
+.footer-links {
+  margin: 0px 100px 0px 0px;
+}
+.footer-links a{
+    display: flex;
+    flex-direction: column;
+    margin: 40px 0px 0px 0px;
+}
+.footer-icons {
+  display: flex;
+  flex-direction: column;
+}
+.footer-icons a{
+    margin: 40px 0px 0px 0px;
+}
