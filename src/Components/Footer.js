@@ -1,3 +1,6 @@
+import { Link } from "react-router-dom"
+import logoimg from '../Asset/logo.png'
+
 function Footer (){
     return(
         <>
@@ -6,22 +9,15 @@ function Footer (){
                     <div className="footer-logo">
                         <h2>NewsLite</h2>
                         <div>
-                            <p>logo</p>
+                            <img className="logoimg" src={logoimg} alt="logo"/>
                         </div>
                     </div>
-                    <div>
-                        <div className="footer-links" >
-                            <a>ABOUT US</a>
-                            <a>CONTACT US</a>
-                            <a>CAREER</a>
-                            <a>SERVICES</a>
+                    <div className="footer-links">
+                        <div>
+                            <Link to="/About">ABOUT US</Link>
+                            <a href="https://portfolio-pedro-s.netlify.app/" target="_blank">Contact Me</a>
+                            <a href="https://www.linkedin.com/in/pedro-s-3948b6126/" target="_blank">LinkedIn</a>
                         </div>
-                    </div>
-                    <div className="footer-icons">
-                        <a>Facebook</a>
-                        <a>Instgram</a>
-                        <a>Twitter</a>
-                        <a>Pintreset</a>
                     </div>
                 </div>
             </div>

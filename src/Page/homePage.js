@@ -1,14 +1,22 @@
-import { useEffect } from "react";
-import { sim } from "../sim/articles";
+import { useEffect, useState } from "react";
 
-function HomePage() {
+
+
+
+function Home() {
+  
   const axios = require("axios").default;
+  const [news, setNews] = useState([]);
+
+ 
 
   const getNews = () => {
     axios
-      .get("")
+      .request(
+        'https://react-express-s.herokuapp.com/home'
+      )
       .then((res) => {
-        console.log(res);
+        setNews(res.data);
       })
       .catch((err) => {
         console.log(err);
@@ -19,19 +27,31 @@ function HomePage() {
     getNews();
   }, []);
 
+
+  
+
   return (
     <>
-      <div className="container">
-        {sim.map((item) => {
+      <div className="home">
+        <div className="home-r">
+          <h1>WELCOME TO THE LATEST NEWS ON THE WEB</h1>
+          <p></p>
+        </div>
+      </div>
+      <div className="home-t">
+        {news.map((item) => {
           return (
             <>
               <div className="card-c">
                 <div className="card-r">
-                  <div className="card">
-                    <h1>{item.title}</h1>
-                    <h3>{}</h3>
-                    <p>{item.snip}</p>
-                  </div>
+                  <a href={item.url} target="_blank">
+                    <div className="card" key={item.id}>
+                      <img src={item.urlToImage} alt="img" />
+                      <h1>{item.title}</h1>
+                      <p>{item.description}</p>
+                      <p className="p2">{item.author}</p>
+                    </div>
+                  </a>
                 </div>
               </div>
             </>
@@ -41,4 +61,4 @@ function HomePage() {
     </>
   );
 }
-export default HomePage;
+export default Home;

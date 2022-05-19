@@ -1,8 +1,13 @@
 function Nav(){
+  
+
+
     return(
         <>
             <div className="navbar">
-                <a href="#">NewsLite</a>
+                <div className="nav-div">
+                    <a href="/" >NewsLite</a>
+                </div>
             </div>
         </>
     )

@@ -5,102 +5,544 @@ body {
 
 /*Navbar section----------*/
 .navbar {
-  background-color: black;
+  background: linear-gradient(45deg, rgb(92, 154, 248), rgb(252, 133, 153));
   margin: 0px;
 }
-.navbar a {
+.nav-div {
   display: flex;
   justify-content: center;
+  padding: 10px 0px 10px 0px;
+}
+.nav-div a {
   text-decoration: none;
-  font-size: 30px;
-  margin: 0px;
-  padding: 10px;
-  color: white;
+  color: aliceblue;
+  font-size: 40px;
+}
+.searchBar button {
+  border: none;
+  margin: 0px 0px 0px 10px;
+  background-color: rgb(92, 154, 248);
+  color: aliceblue;
+  text-transform: capitalize;
+}
+.searchBar button:hover {
+  background-color: rgb(3, 112, 180);
+}
+
+/* search bar section-----------------*/
+
+.searchBar {
+  display: flex;
+  justify-content: center;
+  margin: 30px;
+}
+.searchBar input {
+  width: 100%;
+  height: 50px;
+  font-size: larger;
+  padding: 0px 0px 0px 30px;
+}
+
+/*the home page section----------------*/
+.home {
+  background-color: #333333;
+}
+.home-r {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: aliceblue;
+  text-transform: capitalize;
+}
+.home-t {
+  display: flex;
+  animation: slide 200s linear;
+  animation-iteration-count: infinite;
+}
+@keyframes slide {
+  0% {
+    transform: translateX(0%);
+  }
+  99% {
+    transform: translateX(-500%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
 }
 
 /* sidebar section -------------------*/
+.button-c {
+  display: flex;
+  justify-content: center;
+  border-radius: 100%;
+  margin: 5px 5px 5px 5px;
+}
+.button-c button {
+  border: none;
+  background-color: #333333;
+  color: rgb(92, 154, 248);
+  font-size: large;
+}
 .sidebar-c {
   border: none;
-  background-color: rgb(35, 35, 35);
+  background-color: #333333;
   color: bisque;
-  width: 200px;
-  height: auto;
-}
-.sidebar-div{
-    display: flex;
-    flex-direction: column;
-    margin: 30px;
-}
-.sidebar-div a{
-    margin: 10px;
-    padding: 5px 0px 5px 0px;
-    font-size: 20px;    
-    text-transform: capitalize;
-    border-bottom: grey 1px solid;
+  position: fixed;
+  border-radius: 0px 10px 10px 0px;
+  z-index: 100;
 }
 
+.sidebar-div {
+  display: flex;
+  flex-direction: column;
+  margin: 0px 10px 15px 10px;
+}
 
-
+.sidebar-div a {
+  margin-top: 20px;
+  color: aliceblue;
+  text-decoration: none;
+  font-size: large;
+  text-transform: capitalize;
+  border-radius: 20px;
+  padding: 3px 5px 3px 10px;
+  background: linear-gradient(45deg, rgb(92, 154, 248), rgb(252, 133, 153));
+}
 
 /*content page ---------------------------*/
 
 .content {
   display: flex;
-  background-color: aliceblue;
+  justify-content: center;
+  background-color: #eee;
 }
 
+/*home page section ----------------------*/
+.title {
+  display: flex;
+  justify-content: center;
+  background-color: #333333;
+}
+.title h1 {
+  color: aliceblue;
+}
 
 /* card section-------------------- */
-.container{
-    display: flex;
-    flex-flow: wrap;
-    justify-content: center;
-    margin: 30px 100px 30px 100px;
+.container {
+  display: flex;
+  flex-direction: column;
+  flex-flow: wrap;
+  justify-content: center;
+  margin: 40px 0px 0px 150px;
 }
-.card-c{
-    margin: 20px;
+
+.card-r {
+  margin: 30px;
 }
-.card-r{
-   margin: 20px;
+.card-r a {
+  text-decoration: none;
+  color: black;
 }
-.card{
-    border: black 3px solid;
-    width: 300px;
-    height: 300px;
+.card {
+  display: flex;
+  flex-direction: column;
+  border: black 1px solid;
+  box-shadow: 2px 2px 20px;
+  border-radius: 10px;
+  width: 500px;
+}
+.card img {
+  object-fit: cover;
+  border-radius: 5px;
+  height: 300px;
+}
+.card h1 {
+  background: linear-gradient(45deg, rgb(92, 154, 248), rgb(252, 133, 153));
+  margin: 0px;
+  padding: 10px 0px 0px 10px;
+  color: aliceblue;
+}
+
+.card h3 {
+  background-color: #333333;
+  margin: 0px;
+  padding: 10px 0px 0px 10px;
+  color: whitesmoke;
+}
+.card p {
+  background-color: #333333;
+  margin: 0px;
+  padding: 10px 50px 10px 50px;
+  color: white;
+}
+.p2 {
+  background-color: #333333;
+  margin: 0px;
+  padding: 10px 0px 10px 10px;
+  color: white;
 }
 
 /*Footer section -------------------------*/
 
 .footer-c {
   margin: 0px;
-  padding: 30px 0px 30px 100px ;
+  padding: 30px 0px 30px 100px;
 
-  background-color: black;
+  background-color: #333333;
 }
 .footer-r {
   display: flex;
   color: white;
+  margin: 0px 200px 0px 200px;
 }
 .footer-logo {
+  align-items: center;
   margin: 0px 100px 0px 0px;
 }
-.footer-logo p {
-  width: 200px;
-  height: 200px;
-  background-color: bisque;
+.footer-logo h2 {
+  padding: 0px 0px 0px 58px;
 }
 .footer-links {
-  margin: 0px 100px 0px 0px;
+  margin: 30px 100px 0px 0px;
 }
-.footer-links a{
-    display: flex;
-    flex-direction: column;
-    margin: 40px 0px 0px 0px;
+.footer-links a {
+  display: flex;
+  flex-direction: column;
+  margin: 50px 0px 0px 0px;
+  color: antiquewhite;
+  text-decoration: none;
+  text-transform: uppercase;
 }
 .footer-icons {
   display: flex;
   flex-direction: column;
 }
-.footer-icons a{
-    margin: 40px 0px 0px 0px;
+.footer-icons a {
+  margin: 40px 0px 0px 0px;
 }
+.logoimg {
+  display: flex;
+  justify-content: center;
+  width: 300px;
+}
+
+/* back to the top section--------*/
+.top {
+  display: flex;
+  justify-content: flex-end;
+  margin: 30px 130px 30px 0px;
+  color: rgb(0, 170, 255);
+}
+
+/*About section ----------------------------------*/
+
+.about-c {
+  background-color: #333333;
+  border-bottom: 3px solid black;
+}
+.about-r {
+  display: flex;
+  align-items: center;
+}
+
+.about-i {
+  margin: 0px 0px 0px 100px;
+}
+
+.about-t {
+  color: aliceblue;
+  border-left: 3px solid white;
+  padding: 30px;
+}
+
+/* media Query section --------------*/
+
+@media all and (max-width: 576px) {
+  .home-t {
+    display: flex;
+    animation: none;
+    overflow: scroll;
+  }
+
+  .home-r {
+    text-align: center;
+  }
+
+  .container {
+    margin: 40px 0px 0px 0px;
+  }
+  .card {
+    width: 100%;
+  }
+  .card-r {
+    width: 350px;
+    margin: 30px 0px 30px 0px;
+  }
+
+  .title {
+    text-align: center;
+    padding: 0px 10px 0px 40px;
+  }
+  .sidebar-c-2 {
+    background-color: #333333;
+  }
+
+  .sidebar-div-2 {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .about-c {
+    border: none;
+  }
+  .about-i {
+    margin: 0px;
+    padding: 0px 0px 0px 0px;
+  }
+  .about-i img {
+    width: 350px;
+  }
+  .about-r {
+    display: flex;
+    flex-direction: column;
+  }
+  .about-t {
+    color: aliceblue;
+    border-top: 3px solid white;
+    border-left: none;
+    padding: 30px;
+    margin: 0px 30px 0px 30px;
+  }
+  .footer-r {
+    display: flex;
+    flex-direction: column;
+    margin: 0px;
+  }
+  .footer-c {
+    padding: 0px 0px 50px 30px;
+  }
+  .footer-links {
+    margin: 0px 0px 50px 50px;
+  }
+  .footer-logo {
+    margin: 0px 0px 0px 0px;
+  }
+}
+
+@media all and (max-width: 700px) {
+  .home-t {
+    display: flex;
+    animation: none;
+    overflow-x: scroll;
+  }
+
+  .home-r {
+    text-align: center;
+  }
+
+  .container {
+    margin: 40px 0px 0px 0px;
+  }
+  .card {
+    width: 100%;
+  }
+  .card-c{
+    margin: 20px;
+  }
+  .card-r {
+    width: 350px;
+    margin: 30px 0px 30px 0px;
+  }
+
+  .title {
+    text-align: center;
+    padding: 0px 10px 0px 40px;
+  }
+ 
+
+  .about-c {
+    border: none;
+  }
+  .about-i {
+    margin: 0px;
+    padding: 0px 0px 0px 0px;
+  }
+  .about-i img {
+    width: 350px;
+  }
+  .about-r {
+    display: flex;
+    flex-direction: column;
+  }
+  .about-t {
+    color: aliceblue;
+    border-top: 3px solid white;
+    border-left: none;
+    padding: 30px;
+    margin: 0px 30px 0px 30px;
+  }
+  .footer-r {
+    display: flex;
+    flex-direction: column;
+    margin: 0px;
+  }
+  .footer-c {
+    padding: 0px 0px 50px 30px;
+  }
+  .footer-links {
+    margin: 0px 0px 50px 50px;
+  }
+  .footer-logo {
+    margin: 0px 0px 0px 0px;
+  }
+}
+
+@media all and (min-width:700px) and (max-width: 992px) {
+  .home-t {
+    display: flex;
+    animation: none;
+    overflow-x: scroll;
+  }
+
+  .home-r {
+    text-align: center;
+    
+  }
+  .container {
+    margin: 40px 0px 0px 0px;
+  }
+  .card {
+    width: 100%;
+
+  }
+  .card-r {
+    width: 350px;
+    margin: 30px 0px 30px 0px;
+    padding: 0px 50px 0px 50px;
+  }
+
+  .title {
+    text-align: center;
+    padding: 0px 10px 0px 40px;
+  }
+  .sidebar-c-2 {
+    background-color: #333333;
+  }
+
+  .sidebar-div-2 {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .about-c {
+    border: none;
+  }
+  .about-i {
+    margin: 0px;
+    padding: 0px 0px 0px 0px;
+  }
+  .about-i img {
+    width: 350px;
+  }
+  .about-r {
+    display: flex;
+    flex-direction: column;
+  }
+  .about-t {
+    color: aliceblue;
+    border-top: 3px solid white;
+    border-left: none;
+    padding: 30px;
+    margin: 0px 30px 0px 30px;
+  }
+  .footer-r {
+    display: flex;
+    flex-direction: column;
+    margin: 0px;
+  }
+  .footer-c {
+    padding: 0px 0px 50px 30px;
+  }
+  .footer-links {
+    margin: 0px 0px 50px 50px;
+  }
+  .footer-logo {
+    margin: 0px 0px 0px 0px;
+  }
+}
+@media all and (min-width:992px) and (max-width: 1400px) {
+  .home-t {
+    display: flex;
+    animation: none;
+    overflow-x: scroll;
+  }
+
+  .home-r {
+    text-align: center;
+    
+  }
+  .container {
+    margin: 40px 0px 0px 0px;
+  }
+  .card {
+    width: 100%;
+
+  }
+  .card-r {
+    width: 350px;
+    margin: 30px 0px 30px 0px;
+    padding: 0px 50px 0px 50px;
+  }
+
+  .title {
+    text-align: center;
+    padding: 0px 10px 0px 40px;
+  }
+  .sidebar-c-2 {
+    background-color: #333333;
+  }
+
+  .sidebar-div-2 {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .about-c {
+    border: none;
+  }
+  .about-i {
+    margin: 0px;
+    padding: 0px 0px 0px 0px;
+  }
+  .about-i img {
+    width: 350px;
+  }
+  .about-r {
+    display: flex;
+    flex-direction: column;
+  }
+  .about-t {
+    color: aliceblue;
+    border-top: 3px solid white;
+    border-left: none;
+    padding: 30px;
+    margin: 0px 30px 0px 30px;
+  }
+  .footer-r {
+    display: flex;
+    flex-direction: column;
+    margin: 0px;
+  }
+  .footer-c {
+    padding: 0px 0px 50px 30px;
+  }
+  .footer-links {
+    margin: 0px 0px 50px 50px;
+  }
+  .footer-logo {
+    margin: 0px 0px 0px 0px;
+  }
+}
+
