@@ -1,20 +1,12 @@
 import { useEffect, useState } from "react";
 
-
-
-
 function Home() {
-  
   const axios = require("axios").default;
   const [news, setNews] = useState([]);
 
- 
-
   const getNews = () => {
     axios
-      .request(
-        'https://react-express-s.herokuapp.com/home'
-      )
+      .request("https://react-express-s.herokuapp.com/home")
       .then((res) => {
         setNews(res.data);
       })
@@ -26,9 +18,6 @@ function Home() {
   useEffect(() => {
     getNews();
   }, []);
-
-
-  
 
   return (
     <>
@@ -46,7 +35,9 @@ function Home() {
                 <div className="card-r">
                   <a href={item.url} target="_blank">
                     <div className="card" key={item.id}>
-                      <img src={item.urlToImage} alt="img" />
+                      {item.urlToImage == null ? null : (
+                        <img src={item.urlToImage} alt="img" />
+                      )}
                       <h1>{item.title}</h1>
                       <p>{item.description}</p>
                       <p className="p2">{item.author}</p>

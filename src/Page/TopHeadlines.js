@@ -7,9 +7,7 @@ function HomePage() {
 
   const getNews = () => {
     axios
-      .get(
-        "https://react-express-s.herokuapp.com/Topheadlines"
-      )
+      .get("https://react-express-s.herokuapp.com/Topheadlines")
       .then((res) => {
         setNews(res.data);
       })
@@ -36,7 +34,9 @@ function HomePage() {
                   <div className="card-r">
                     <a href={item.url} target="_blank">
                       <div className="card" key={item.id}>
-                        <img src={item.urlToImage} alt="img" />
+                        {item.urlToImage == null ? null : (
+                          <img src={item.urlToImage} alt="img" />
+                        )}
                         <h1>{item.title}</h1>
                         <p>{item.description}</p>
                         <p className="p2">{item.author}</p>
@@ -48,7 +48,9 @@ function HomePage() {
             );
           })}
         </div>
-        <a className="top" href="#">back to the top</a>
+        <a className="top" href="#">
+          back to the top
+        </a>
       </div>
     </>
   );

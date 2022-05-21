@@ -1,4 +1,4 @@
-import {useEffect,useState} from 'react'
+import { useEffect, useState } from "react";
 
 function Entertainment() {
   const axios = require("axios").default;
@@ -6,9 +6,7 @@ function Entertainment() {
 
   const getCar = () => {
     axios
-      .get(
-        "https://react-express-s.herokuapp.com/Entertainment"
-      )
+      .get("https://react-express-s.herokuapp.com/Entertainment")
       .then((res) => {
         setContent(res.data);
       })
@@ -34,7 +32,9 @@ function Entertainment() {
                   <div className="card-r">
                     <a href={item.url} target="_blank">
                       <div className="card" key={item.id}>
-                        <img src={item.urlToImage} alt="img" />
+                        {item.urlToImage == null ? null : (
+                          <img src={item.urlToImage} alt="img" />
+                        )}
                         <h1>{item.title}</h1>
                         <p>{item.description}</p>
                         <p className="p2">{item.author}</p>
@@ -46,7 +46,9 @@ function Entertainment() {
             );
           })}
         </div>
-        <a className="top" href="#">back to the top</a>
+        <a className="top" href="#">
+          back to the top
+        </a>
       </div>
     </>
   );

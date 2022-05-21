@@ -1,4 +1,4 @@
-import {useEffect,useState} from 'react'
+import { useEffect, useState } from "react";
 
 function Crypto() {
   const axios = require("axios").default;
@@ -6,9 +6,7 @@ function Crypto() {
 
   const getCar = () => {
     axios
-      .get(
-        `https://react-express-s.herokuapp.com/Crypto`
-      )
+      .get(`https://react-express-s.herokuapp.com/Crypto`)
       .then((res) => {
         setContent(res.data);
       })
@@ -35,7 +33,9 @@ function Crypto() {
                   <div className="card-r">
                     <a href={item.url} target="_blank">
                       <div className="card" key={item.id}>
-                        <img src={item.urlToImage} alt="img" />
+                        {item.urlToImage == null ? null : (
+                          <img src={item.urlToImage} alt="img" />
+                        )}
                         <h1>{item.title}</h1>
                         <p>{item.description}</p>
                         <p className="p2">{item.author}</p>
@@ -47,9 +47,11 @@ function Crypto() {
             );
           })}
         </div>
-        <a className="top" href="#">back to the top</a>
+        <a className="top" href="#">
+          back to the top
+        </a>
       </div>
     </>
   );
 }
-export default Crypto
+export default Crypto;
